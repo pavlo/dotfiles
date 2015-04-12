@@ -375,3 +375,6 @@ nnoremap <Leader>w :w<CR>
 " OSX clipboard
 set clipboard=unnamed
 
+" Shortcuts
+nmap <Leader>t :NERDTreeToggle<CR>
+
