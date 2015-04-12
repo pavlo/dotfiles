@@ -91,25 +91,23 @@ alias brake="bundle exec rake"
 # Misc
 alias rm="trash"
 
-LOCAL_BIN=~/Applications/bin
+LOCAL_APPS=$HOME/Applications
+LOCAL_BIN=$LOCAL_APPS/bin
+DOTFILES=$HOME/.dotfiles
 
-MVN_HOME=~/Applications/maven
-ANT_HOME=~/Applications/ant
-NDK_HOME=~/Applications/android-ndk
-RABBITMQ_HOME=~/Applications/rabbitmq
-REDIS_HOME=~/Applications/redis
-DART_SDK_HOME=~/Applications/dart/dart-sdk 
+MVN_HOME=$LOCAL_APPS/maven
+ANT_HOME=$LOCAL_APPS/ant
+NDK_HOME=$LOCAL_APPS/android-ndk
+RABBITMQ_HOME=$LOCAL_APPS/rabbitmq
+REDIS_HOME=$LOCAL_APPS/redis
+DART_SDK_HOME=$LOCAL_APPS/dart/dart-sdk 
 
-export PATH=$LOCAL_BIN/:$RABBITMQ_HOME/sbin/:$NDK_HOME:$ANT_HOME/bin:$MVN_HOME/bin:$REDIS_HOME/src:$DART_SDK_HOME/bin:$PATH
+export PATH=$HOME/.rbenv/bin:$LOCAL_BIN/:$RABBITMQ_HOME/sbin/:$NDK_HOME:$ANT_HOME/bin:$MVN_HOME/bin:$REDIS_HOME/src:$DART_SDK_HOME/bin:$PATH
 
 export JAVA_HOME=$(/usr/libexec/java_home)
-
-
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-export PATH="$HOME/.rbenv/bin:$PATH"
+#export PATH="$HOME/.rbenv/bin:$PATH"
+export MC_SKIN=$DOTFILES/mc/lib/mc-solarized-skin/solarized.ini
+
 eval "$(rbenv init -)"
-
-
-
-export MC_SKIN=/Users/pa/.mc/lib/mc-solarized-skin/solarized.ini

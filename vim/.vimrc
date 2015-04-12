@@ -24,8 +24,10 @@ NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'vim-scripts/matchit.zip'
 
 NeoBundle 'The-NERD-tree'
-NeoBundle 'The-NERD-Commenter'
+"#NeoBundle 'The-NERD-Commenter'
 NeoBundle 'Shougo/unite.vim.git'
+NeoBundle 'tpope/vim-commentary'
+NeoBundle 'majutsushi/tagbar'
 
 NeoBundle 'bling/vim-airline'
 let g:airline_theme='powerlineish'
@@ -103,8 +105,6 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
-" Use `Ctrl-L` to clear the highlighting of :set hlsearch.
-nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 
 " Always show window statuses, even if there's only one.
 set laststatus=2
@@ -370,11 +370,20 @@ omap s :normal vs<CR>
 
 " Customisations
 let mapleader = "\<Space>"
-nnoremap <Leader>w :w<CR>
+let NERDTreeShowHidden=1
 
 " OSX clipboard
 set clipboard=unnamed
 
-" Shortcuts
-nmap <Leader>t :NERDTreeToggle<CR>
+" -------------- Shortcuts
+" Use `Ctrl-L` to clear the highlighting of :set hlsearch.
+nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 
+" Saving
+nnoremap <Leader>w :w<CR>
+
+
+" Plugins
+nmap <Leader>t :NERDTreeToggle<CR>
+nmap <Leader>c gcc<Down>
+nnoremap <Leader>vt :TagbarToggle<CR>
