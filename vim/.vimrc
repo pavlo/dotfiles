@@ -27,6 +27,7 @@ NeoBundle 'The-NERD-tree'
 "#NeoBundle 'The-NERD-Commenter'
 NeoBundle 'Shougo/unite.vim.git'
 NeoBundle 'tpope/vim-commentary'
+NeoBundle 'tpope/vim-surround'
 NeoBundle 'majutsushi/tagbar'
 
 NeoBundle 'bling/vim-airline'
@@ -378,6 +379,9 @@ set clipboard=unnamed
 " -------------- Shortcuts
 " Use `Ctrl-L` to clear the highlighting of :set hlsearch.
 nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
+map <Leader>x :close<CR>
+noremap <F5> :b#<CR>
+noremap <Leader>b :b#<CR>
 
 " Saving
 nnoremap <Leader>w :w<CR>
